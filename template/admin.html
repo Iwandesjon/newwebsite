@@ -1,0 +1,81 @@
+<div id="content">
+
+    <div class="contentbox">
+
+        <div class="header"><h2>Adminpanel</h2></div>
+
+        <div class="content">
+            <p>Dit is het administratiepaneel van de clansite, hier kunt u geregistreerde leden zoeken, wijzigen en verwijderen.</p>
+        </div>
+
+    </div>
+
+    <img class="banner" src="template/img/bfbanner.png" alt="" />
+
+    <div class="contentbox1">
+
+        <div class="header"><h2>Leden zoeken</h2></div>
+
+        <div class="content">
+
+            <div class="zoeken">
+
+                <ul>
+
+                    <fieldset><form name="search" method="post" action="index.php?pid=3">
+                    <input type="text" name="Zoeken" placeholder="Zoek naar leden" /></fieldset>
+                    <fieldset><input type="submit" name="Search" value="Zoeken" /></fieldset>
+                    </form>
+
+                </ul>
+
+            </div>
+
+            <div class="zoeken">
+
+                <table>
+
+                    <!-- START BLOCK : LEDEN -->
+
+                        <tr>
+                            <td>{Leden}</td>
+                            <td><a href="index.php?pid=3&actie=bewerken&id={LidId}">Bewerken</a></td>
+                            <td><a href="index.php?pid=3&actie=verwijderen&id={LidId}">Verwijderen</a></td>
+                        </tr>
+
+                    <!-- END BLOCK : LEDEN -->
+
+                </table>
+
+            </div>
+
+                <!-- START BLOCK : BEWERKEN -->
+
+                <form action="index.php?pid=3&actie=bewerken&id={LidId}" method="post">
+
+                    <fieldset>
+
+                        <label class="all" for="Gebruikersnaam"><b>Gebruikersnaam</b></label><input type="text" name="Gebruikersnaam" id="Gebruikersnaam" value="{gebruikersnaam}" />
+                        <label class="all" for="Voornaam"><b>Voornaam</b></label><input type="text" name="Voornaam" id="Voornaam" value="{voornaam}" />
+                        <label class="all" for="Achternaam"><b>Achternaam</b></label><input type="text" name="Achternaam" id="Achternaam" value="{achternaam}" />
+                        <label class="all" for="Email"><b>Email</b></label><input type="Email" name="Email" id="Email" value="{email}" />
+                        
+                        
+
+
+                        <input type="submit" value="Bewerken" name="Bewerken"  />
+
+                    </fieldset>
+
+                </form>
+
+                <!-- END BLOCK : BEWERKEN -->
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+

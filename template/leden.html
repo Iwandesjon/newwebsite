@@ -1,0 +1,83 @@
+<div id="content">
+
+    <div class="contentbox">
+
+        <div class="header"><h2>Leden</h2></div>
+
+        <div class="content">
+
+        <img src="template/img/char3.png" alt="" style="float: right; height:200px; width:100px;" />
+
+        <p>
+        Zoals elke clan, heeft ook <b>G-Unit</b> vele leden. Leden die voor de lol afentoe een potje meespelen en leden die serieus met andere leden een team vormen om zodoende de tegenpartij te kunnen verslaan. Zonder de leden zou G-Unit het nooit lang uit kunnen houden, mede dankzij de leden kunnen we inmiddels al 9! servers laten draaien en de website onderhouden. De leden die dit mede mogelijk hebben gemaakt, kun je herkennen aan hun rank. We hebben 4 verschillende ranken:
+        </p>
+
+        <ul>
+            <li>Rank 1 - Admin</li>
+            <li>Rank 2 - Member</li>
+        </ul>
+
+        </div>
+
+    </div>
+
+    <img class="banner" src="template/img/codbanner.png" alt="" />
+
+    <div class="contentbox1">
+
+        <div class="header"><h2>Ledenlijst</h2></div>
+
+        <div class="content">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <td>Gebruikersnaam</td>
+                        <td>Naam</td>
+                        <td>Rank</td>
+                        <td>Bericht versturen</td>
+                    </tr>
+
+                </thead>
+
+                <!-- START BLOCK : LEDEN -->
+                <tbody>
+
+                    <tr>
+                        <td>{GEBRUIKERSNAAM}</td>
+                        <td>{NAAM}</td>
+                        <td>{RANK}</td>
+                        <td><a href="index.php?pid=4&actie=sendMessage&id={LidId}">bericht versturen</a></td>
+                    </tr>
+
+                </tbody>
+                <!-- END BLOCK : LEDEN -->
+
+                <!-- START BLOCK : BERICHTEN -->
+
+                <form action="index.php?pid=4&actie=sendMessage&id={LidId}" method="post">
+
+                    <label id="onderwerp">Onderwerp</label>
+                    <input name="onderwerp" type="text" id="onderwerp" />
+                    <textarea name="bericht" rows="6" cols="60"></textarea>
+
+                    <input type="submit" name="submitMessage" value="Verzenden"/>
+                    <input type="hidden" name="submitMessage" value="{LidId}"/>
+
+                <!-- END BLOCK : BERICHTEN -->
+
+                <!-- START BLOCK : ERROR -->
+                        {ERRORTEXT}
+                <!-- END BLOCK : ERROR -->
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
